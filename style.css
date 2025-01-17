@@ -1,0 +1,105 @@
+@font-face {
+    font-family: "Sixtyfour";
+    src: url("Sixtyfour-Regular-VariableFont_BLED,SCAN.ttf");
+}
+
+body {
+    background-color: #A9A1C8;
+    font-family: "Sixtyfour";
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.outer-wrapper {
+    height: 100%;
+    padding: 2rem;
+    position: relative;
+    
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 4rem;
+    padding: 0rem 2rem;
+    height: 100%;
+
+    h1 {
+        font-size: 5rem;
+    }
+
+    p {
+        font-size: 2rem;
+    }
+
+    a {
+        font-size: 1.5rem;
+    }
+}
+
+.links {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    gap: 1.5rem;
+    z-index: 99;
+}
+
+.images {
+    position: relative;
+    /* height: 100vh; */
+    /* width: 100vw; */
+}
+
+ .racoon {
+    position: sticky;
+    bottom: 0px;
+    /* left: 0rem; */
+    border-radius: 50%;
+    opacity: 90%;
+}
+
+.earth {
+    position: absolute;
+    top: -2rem;
+    left: -3rem;
+    z-index: 0;
+    opacity: 33%;
+    border-radius: 50%;
+}
+
+.dachshund {
+    position: absolute;
+    opacity: 33%;
+    rotate: 33deg;
+    top: 5rem;
+    right: 0rem;
+    width: 200px;
+}
+
+.image-4 {
+    position: absolute;
+    left: 10rem;
+    opacity: 75%;
+    width: 300px;
+    rotate: -33deg;
+    border-radius: 1rem;
+}
+
+.image-5 {
+    position: absolute;
+    right: -5rem;
+    top: 21rem;
+    z-index: 0;
+    opacity: 44%;
+}
+
+.image-6 {
+    width: 300px;
+    position: absolute;
+    bottom: 3rem;
+    opacity: 50%;
+    rotate: 10deg;
+}
