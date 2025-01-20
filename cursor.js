@@ -3,7 +3,7 @@ const CELL_SIZE = 30;
 const COLOR_R = 250;
 const COLOR_G = 249;
 const COLOR_B = 218;
-const STARTING_ALPHA = 255;
+const STARTING_ALPHA = 200;
 const BACKGROUND_COLOR = "#A9A1C8";
 const PROB_OF_NEIGHBOR = 0.3;
 const AMT_FADE_PER_FRAME = 25;
@@ -26,7 +26,7 @@ function setup() {
   cnv.style("z-index", -1);
   colorWithAlpha = color(COLOR_R, COLOR_G, COLOR_B, STARTING_ALPHA);
   noFill();
-  //   stroke(colorWithAlpha);
+  stroke(colorWithAlpha);
   strokeWeight(STROKE_WEIGHT);
   numRows = Math.ceil(windowHeight / CELL_SIZE);
   numCols = Math.ceil(windowWidth / CELL_SIZE);
@@ -41,7 +41,6 @@ function draw() {
     currentRow = row;
     currentCol = col;
 
-    // rect(x, y, CELL_SIZE, CELL_SIZE);
     allNeighbors.push(...getRandomNeighbors(row, col));
   }
 
