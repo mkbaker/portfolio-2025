@@ -101,35 +101,56 @@ function cursor(c) {
 new p5(cursor);
 
 function foregroundCanvas(f) {
-  // let angle = 0;
+  let angle = 0;
   let shuttle;
 
   f.preload = function () {
     shuttle = f.loadModel("shuttle.obj", true);
+    earth = f.loadImage(
+      "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExajgyM3B6eGJ0NGUwbjRwMTh3NzNjdG83bThlOXJqYTloMW02bnVydyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GiXbMe92rt9NS/giphy.gif"
+    );
   };
 
   f.setup = function () {
-    let cnv = f.createCanvas(f.windowWidth, f.windowHeight, f.WEBGL);
+    let cnv = f.createCanvas(500, 500, f.WEBGL);
     cnv.style("position", "fixed");
-    cnv.style("inset", 0);
     cnv.style("z-index", 1);
+    cnv.style("bottom", "0px");
+    cnv.style("right", "0px");
+    f.describe("A space shuttle orbiting the earth.");
   };
 
   f.draw = function () {
     f.clear();
     f.background(255, 255, 255, 0);
 
-    f.orbitControl();
+    f.push();
+    f.translate(0, 0);
+    f.imageMode(f.CENTER);
+    f.image(earth, 0, 0, 200, 200);
+    f.pop();
+
+    let radius = 200;
+    let x = radius * Math.cos(angle);
+    let y = radius * Math.sin(angle);
+
+    let tangentAngle = angle + Math.PI / 100;
+
+    f.push();
+    f.translate(x, y, 0);
+    f.rotateZ(tangentAngle);
+    f.rotateY(angle);
     f.scale(0.5);
-    f.rotateX(f.frameCount * 0.01);
-    f.rotateY(f.frameCount * 0.01);
     f.normalMaterial();
     f.model(shuttle);
+    f.pop();
+
+    angle -= 0.02;
   };
 
-  f.windowResized = function () {
-    f.resizeCanvas(f.windowWidth, f.windowHeight);
-  };
+  // f.windowResized = function () {
+  //   f.resizeCanvas(f.windowWidth, f.windowHeight);
+  // };
 }
 
 new p5(foregroundCanvas);
