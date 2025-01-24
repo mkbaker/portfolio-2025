@@ -100,7 +100,7 @@ function cursor(c) {
 
 new p5(cursor);
 
-function foregroundCanvas(f) {
+function shuttleAnimation(f) {
   let angle = 0;
   let shuttle;
 
@@ -147,10 +147,6 @@ function foregroundCanvas(f) {
 
     angle -= 0.02;
   };
-
-  // f.windowResized = function () {
-  //   f.resizeCanvas(f.windowWidth, f.windowHeight);
-  // };
 }
 
-new p5(foregroundCanvas);
+new p5(shuttleAnimation);

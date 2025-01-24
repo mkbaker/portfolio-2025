@@ -1,105 +1,113 @@
 @font-face {
-    font-family: "Sixtyfour";
-    src: url("Sixtyfour-Regular-VariableFont_BLED,SCAN.ttf");
+  font-family: "Sixtyfour";
+  src: url("Sixtyfour-Regular-VariableFont_BLED,SCAN.ttf");
 }
 
+html,
 body {
-    background-color: #A9A1C8;
-    font-family: "Sixtyfour";
-    text-align: center;
-    width: 100%;
-    height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  font-family: "Sixtyfour", sans-serif;
+  text-align: center;
 }
 
 .outer-wrapper {
-    height: 100%;
-    padding: 2rem;
-    position: relative;
-    
+  height: 100%;
+  padding: 2rem;
 }
 
 .main {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-bottom: 4rem;
-    padding: 0rem 2rem;
-    height: 100%;
+  position: relative;
+  z-index: 100;
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  color: #333;
+}
 
-    h1 {
-        font-size: 5rem;
-    }
-
-    p {
-        font-size: 2rem;
-    }
-
-    a {
-        font-size: 1.5rem;
-    }
+h1.title {
+  font-size: 5rem;
+  margin: 0;
+  color: #4a4a6a;
+}
+p {
+  font-size: 2rem;
+  color: #4a4a6a;
 }
 
 .links {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    gap: 1.5rem;
-    z-index: 99;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  gap: 1rem;
 }
 
-.images {
-    position: relative;
-    /* height: 100vh; */
-    /* width: 100vw; */
+.links a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #4a4a6a;
+  padding: 0.5rem 1rem;
+  border: 2px solid #4a4a6a;
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
- .racoon {
-    position: sticky;
-    bottom: 0px;
-    /* left: 0rem; */
-    border-radius: 50%;
-    opacity: 90%;
+.links a:hover {
+  background-color: #4a4a6a;
+  color: #fff;
 }
 
-.earth {
-    position: absolute;
-    top: -2rem;
-    left: -3rem;
-    z-index: 0;
-    opacity: 33%;
-    border-radius: 50%;
+.racoon {
+  border-radius: 50%;
+  opacity: 90%;
 }
 
 .dachshund {
-    position: absolute;
-    opacity: 33%;
-    rotate: 33deg;
-    top: 5rem;
-    right: 0rem;
-    width: 200px;
+  opacity: 33%;
+  rotate: 33deg;
+  width: 200px;
 }
 
 .image-4 {
-    position: absolute;
-    left: 10rem;
-    opacity: 75%;
-    width: 300px;
-    rotate: -33deg;
-    border-radius: 1rem;
+  opacity: 75%;
+  width: 300px;
+  rotate: -33deg;
+  border-radius: 1rem;
 }
 
 .image-5 {
-    position: absolute;
-    right: -5rem;
-    top: 21rem;
-    z-index: 0;
-    opacity: 44%;
+  opacity: 44%;
 }
 
 .image-6 {
-    width: 300px;
-    position: absolute;
-    bottom: 3rem;
-    opacity: 50%;
-    rotate: 10deg;
+  width: 300px;
+  opacity: 70%;
+  rotate: 10deg;
+  border-radius: 50%;
+}
+
+.image-7 {
+  width: 200px;
+  opacity: 90%;
+  rotate: -10deg;
+}
+
+.image-8 {
+  width: 200px;
+}
+
+.image-9 {
+  width: 400px;
+  opacity: 60%;
+}
+
+.image-10 {
+  width: 500px;
 }
